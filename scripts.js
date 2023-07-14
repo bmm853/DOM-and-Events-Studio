@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
     const leftButton = document.getElementById("left");
     const rightButton = document.getElementById("right");
     const status = document.getElementById("flightStatus");
-    const backgroundColor = document.getElementById("shuttleBackground");
+    const background = document.getElementById("shuttleBackground");
     const height = document.getElementById("spaceShuttleHeight");
     const rocket = document.getElementById("rocket");
 
@@ -17,7 +17,7 @@ window.addEventListener("load", function () {
         let response = window.confirm("Confirm that the shuttle is ready for takeoff.");
         if (response) {
             status.innerHTML = "Shuttle in flight";
-            backgroundColor.style.background = "blue";
+            background.style.backgroundColor = "blue";
             height.innerHTML = Number(height.innerHTML) + 10000; 
         }
     });
@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
     landButton.addEventListener("click",function() {
         let response = window.alert("The shuttle is landing. Landing gear engaged.");
         status.innerHTML = "The shuttle has landed";
-        backgroundColor.style.background = "";
+        background.style.backgroundColor = "";
         height.innerHTML = 0;
         rocket.style.left = "0px";
         rocket.style.bottom = "0px";
@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
         let response = window.confirm("Confirm that you want to abort the mission.");
         if (response) {
             status.innerHTML = "Mission aborted.";
-            backgroundColor.style.background = "";
+            background.style.backgroundColor = "";
             height.innerHTML = 0; 
             rocket.style.left = "0px";
             rocket.style.bottom = "0px";
